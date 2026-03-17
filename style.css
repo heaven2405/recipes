@@ -1,0 +1,185 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BASE */
+
+body{
+font-family:'Inter', sans-serif;
+background:#F6E5D2;
+color:#111;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:100px 10%;
+background:#2F5A4E;
+color:white;
+position:relative;
+overflow:hidden;
+}
+
+/* TEXT */
+
+.hero-text{
+max-width:500px;
+animation:fadeUp 1s ease;
+}
+
+.hero h1{
+font-family:'Dancing Script', cursive;
+font-size:80px;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+opacity:0.9;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#F37C6D;
+color:white;
+border-radius:30px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+
+.hero-image img{
+width:350px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+animation:fadeIn 1.5s ease;
+}
+
+/* WAVE (effet déchiré) */
+
+.wave{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:120px;
+background:#F6E5D2;
+clip-path: polygon(0 60%, 10% 70%, 20% 65%, 30% 75%, 40% 60%, 50% 80%, 60% 65%, 70% 75%, 80% 60%, 90% 70%, 100% 60%, 100% 100%, 0 100%);
+}
+
+/* CONTENT */
+
+.content{
+padding:80px 10%;
+text-align:center;
+}
+
+.content h2{
+font-family:'Playfair Display', serif;
+font-size:40px;
+margin-bottom:40px;
+}
+
+/* GRID */
+
+.grid{
+display:flex;
+gap:50px;
+justify-content:center;
+text-align:left;
+}
+
+.grid div{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.grid div:hover{
+transform:translateY(-10px);
+}
+
+/* SHOWCASE */
+
+.showcase{
+padding:80px 10%;
+text-align:center;
+}
+
+.showcase img{
+width:60%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+color:#666;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero-image img{
+margin-top:30px;
+width:80%;
+}
+
+.grid{
+flex-direction:column;
+}
+
+.showcase img{
+width:100%;
+}
+
+}
