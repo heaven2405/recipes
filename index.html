@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HCW Recipes</title>
+<title>HCW Recipes Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -22,45 +22,57 @@
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="hero-text fade-up">
 <h1>HCW Recipes</h1>
-<p>Homemade Kapalı Hamburger 🍔</p>
-
-<a href="#recipe" class="btn">View Recipe</a>
+<p>Kapalı Hamburger Experience 🍔</p>
+<a href="#recipe" class="btn">Explore</a>
 </div>
 
-<div class="hero-image">
+<div class="hero-image fade-in">
 <img src="images/burger fini.jpeg" alt="burger">
 </div>
 
-<!-- effet déchiré -->
 <div class="wave"></div>
 
 </section>
 
 
-<!-- CONTENT -->
+<!-- CONCEPT -->
+
+<section class="concept fade-up">
+
+<h2>The Concept</h2>
+
+<p>
+This project explores the transformation of a traditional Turkish street food 
+into a refined culinary experience. The design focuses on simplicity, texture, 
+and visual storytelling.
+</p>
+
+</section>
+
+
+<!-- INGREDIENTS -->
 
 <section id="recipe" class="content">
 
-<h2>Kapalı Hamburger</h2>
+<h2>Ingredients</h2>
 
 <div class="grid">
 
-<div>
-<h3>🥖 Bread Ingredients</h3>
+<div class="card fade-up">
+<h3>Bread</h3>
 <ul>
 <li>Warm water</li>
 <li>Milk</li>
 <li>Yogurt</li>
-<li>Oil</li>
 <li>Yeast</li>
 <li>Flour</li>
 </ul>
 </div>
 
-<div>
-<h3>🍖 Meat Ingredients</h3>
+<div class="card fade-up">
+<h3>Meat</h3>
 <ul>
 <li>Minced beef</li>
 <li>Onion</li>
@@ -74,13 +86,41 @@
 </section>
 
 
-<!-- IMAGE SECTION -->
+<!-- PROCESS -->
 
-<section class="showcase">
+<section class="process">
 
+<h2>Preparation Process</h2>
+
+<div class="steps">
+
+<div class="step fade-up">
+<h3>01</h3>
+<p>Prepare and rest the dough.</p>
+</div>
+
+<div class="step fade-up">
+<h3>02</h3>
+<p>Season and shape the meat.</p>
+</div>
+
+<div class="step fade-up">
+<h3>03</h3>
+<p>Bake, assemble and serve.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SHOWCASE -->
+
+<section class="showcase-full">
+
+<div class="overlay fade-in">
 <h2>Final Result</h2>
-
-<img src="images/burger fini.jpeg" alt="burger">
+</div>
 
 </section>
 
@@ -88,8 +128,25 @@
 <!-- FOOTER -->
 
 <footer>
-© 2026 HCW Recipes
+© 2026 HCW Recipes — Portfolio Project
 </footer>
+
+
+<!-- SIMPLE ANIMATION SCRIPT -->
+
+<script>
+const elements = document.querySelectorAll('.fade-up, .fade-in');
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
